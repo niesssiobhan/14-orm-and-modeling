@@ -7,8 +7,8 @@
 
 ### Links and Resources
 * [repo](https://github.com/niesssiobhan/14-orm-and-modeling)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
+* [travis](https://travis-ci.com/niesssiobhan/14-orm-and-modeling)
+* [back-end](https://git.heroku.com/niess-14-lab.git) (when applicable)
 
 #### Documentation
 * [swagger](http://xyz.com) (API assignments only)
