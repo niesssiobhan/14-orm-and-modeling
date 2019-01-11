@@ -2,18 +2,18 @@
 
 const express = require('express');
 
-const Players = require('../models/players.js');
-const players = new Players();
+// const Players = require('../models/players.js');
+// const players = new Players();
 
 const router = express.Router();
 
 // ROUTES
-router.get('/api/v1/players', getPlayers);
-router.post('/api/v1/players', postPlayers);
+router.get('/api/v1/:model', getPlayers);
+router.post('/api/v1/:model', postPlayers);
 
-router.get('/api/v1/players/:id', getPlayer);
-router.put('/api/v1/players/:id', putPlayers);
-router.delete('/api/v1/players/:id', deletePlayers);
+router.get('/api/v1/:model/:id', getPlayer);
+router.put('/api/v1/:model/:id', putPlayers);
+router.delete('/api/v1/:model/:id', deletePlayers);
 
 // FUNCTIONS
 function getPlayers(request,response,next) {
