@@ -30,22 +30,22 @@ describe('api server', () => {
 
   });
 
-  it('should respond properly on request to /api/v1/teams', () => {
+  it('should respond properly on request to /api/v1/categories', () => {
 
     return mockRequest
-      .get('/api/v1/teams')
+      .get('/api/v1/categories')
       .then(results => {
         expect(results.status).toBe(200);
       });
 
   });
 
-  it('should be able to post to /api/v1/teams', () => {
+  it('should be able to post to /api/v1/categories', () => {
 
     let obj = {name:'test'};
 
     return mockRequest
-      .post('/api/v1/teams')
+      .post('/api/v1/categories')
       .send(obj)
       .then(results => {
         expect(results.status).toBe(200);
@@ -54,12 +54,12 @@ describe('api server', () => {
 
   });
 
-  it('should be able to post to /api/v1/players', ()  => {
+  it('should be able to post to /api/v1/categories', ()  => {
 
-    let obj = {name:'John', bats:'R',throws:'R',position:'C',team:'Bunnies'};
+    let obj = {name:'Teagan', description:'toddler', type:'lady'};
 
     return mockRequest
-      .post('/api/v1/players')
+      .post('/api/v1/categories')
       .send(obj)
       .then(results => {
         expect(results.status).toBe(200);
@@ -71,13 +71,13 @@ describe('api server', () => {
 
   it('following a post to players, should find a single record', () => {
 
-    let obj = {name:'John', bats:'R',throws:'R',position:'C',team:'Bunnies'};
+    let obj = {name:'Teagan', description:'toddler', type:'lady'};
 
     return mockRequest
-      .post('/api/v1/players')
+      .post('/api/v1/categories')
       .send(obj)
       .then(results => {
-        return mockRequest.get(`/api/v1/players/${results.body._id}`)
+        return mockRequest.get(`/api/v1/categories/${results.body._id}`)
           .then(list => {
             expect(list.status).toBe(200);
             expect(list.body.team).toEqual(obj.team);
