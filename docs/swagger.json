@@ -1,0 +1,226 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Categories and Products",
+    "version": "1.0.0",
+    "title": "Core API"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemas": ["http"],
+  "paths": {
+    "api/v1/categories": {
+      "get": {
+        "description": "Get all categories",
+        "responses": {
+          "200": {
+            "description": "Returned a list of categories",
+            "schema": {
+              "$ref": "#/definitions/getAll"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new category",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "record",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned the created category",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+    "api/v1/categories/id": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "get": {
+        "description": "Get one category",
+        "responses": {
+          "200": {
+            "description": "Returned a single category",
+            "schema": {
+              "$ref": "#/definitions/getOne"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete one category",
+        "responses": {
+          "200": {
+            "description": "Deletes a single category",
+            "schema": {
+              "$ref": "#/definitions/getOne"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Create a new category",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "record",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned the created category",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+         "paths": {
+    "api/v1/products": {
+      "get": {
+        "description": "Get all products",
+        "responses": {
+          "200": {
+            "description": "Returned a list of procducts",
+            "schema": {
+              "$ref": "#/definitions/getAll"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new product",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "record",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned the created category",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    },
+    "api/v1/products/id": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "get": {
+        "description": "Get one product",
+        "responses": {
+          "200": {
+            "description": "Returned a single products",
+            "schema": {
+              "$ref": "#/definitions/getOne"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete one product",
+        "responses": {
+          "200": {
+            "description": "Deletes a single product",
+            "schema": {
+              "$ref": "#/definitions/getOne"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Create a new product",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "record",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returned the created product",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    }
+  },
+    "Product": {
+      "type": "object",
+      "required": [
+        "name", "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "getAll": {
+      "type": "object",
+      "example": {
+        "count": 2,
+        "results": [
+          "{}",
+          "{}"
+        ]
+      }
+    },
+    "getOne": {
+      "type": "object",
+      "example": {}
+    }
+  }
+}

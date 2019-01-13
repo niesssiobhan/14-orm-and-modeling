@@ -8,11 +8,10 @@
 ### Links and Resources
 * [repo](https://github.com/niesssiobhan/14-orm-and-modeling)
 * [travis](https://travis-ci.com/niesssiobhan/14-orm-and-modeling)
-* [back-end](https://git.heroku.com/niess-14-lab.git) (when applicable)
+* [back-end](https://git.heroku.com/niess-14-lab.git)
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+* [swagger](https://app.swaggerhub.com/apis/niesssiobhan/books/1.0.0) (API assignments only)
 
 ### Modules
 #### `index.js`
@@ -29,13 +28,13 @@
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number 3000
-* `MONGODB_URI` - MONGODB_URI=mongodb://localhost:27017/store
+* `MONGODB_URI` - MONGODB_URI=mongodb://localhost:27017/baseball
 
 #### Running the app
-* theinstallastions that you will have to are going to be `htppie`, `nodemon`, `mongo db`
+* the installastions that you will have to are going to be `htppie`, `nodemon`, `mongo db`
     * these are going to allow you to run the app
 * in your terminal you are going to want to run the command `nodemon index.js`   
-* open up another terminal window/tab and run the command `http :3000`
+* open up another terminal window/tab and run the command `http :3000/api/v1`
 * to start up mongo db:
     * `start mongodb path <file path to database>`
     * `start mongodb` (this will be in another window/tab of your terminal)
