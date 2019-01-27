@@ -11,7 +11,8 @@
 * [back-end](https://git.heroku.com/niess-14-lab.git)
 
 #### Documentation
-* [swagger](https://app.swaggerhub.com/apis/niesssiobhan/books/1.0.0) (API assignments only)
+* [swagger](https://app.swaggerhub.com/apis/niesssiobhan/books/1.0.0) 
+* [json]()
 
 ### Modules
 #### `index.js`
@@ -53,5 +54,6 @@
   
 #### Tests
 * How do you run tests?
+npm test
 * What assertions were made?
 * What assertions need to be / should be made?
