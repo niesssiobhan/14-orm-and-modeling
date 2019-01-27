@@ -12,7 +12,7 @@
 
 #### Documentation
 * [swagger](https://app.swaggerhub.com/apis/niesssiobhan/books/1.0.0) 
-* [json]()
+* [json](https://niess-14-lab.herokuapp.com/docs)
 
 ### Modules
 #### `index.js`
